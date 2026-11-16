@@ -1,0 +1,23 @@
+name: Static website validation
+
+on:
+  push:
+    branches: [main, website/initial-launch]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: |
+          node --check assets/js/main.js
+          node --check assets/js/projects-data.js
+          node --check assets/js/projects.js
+      - name: Verify HTML links and required uploads
+        run: node scripts/check-site.mjs
