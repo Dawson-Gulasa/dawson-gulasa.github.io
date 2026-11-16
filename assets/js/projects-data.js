@@ -5,7 +5,7 @@ slug:"optimus-prime-fpga",title:"Optimus Prime FPGA",category:"Digital Hardware"
 subtitle:"An interactive, multi-clock FPGA system for generating and verifying prime numbers.",
 summary:"Built a Verilog system around the Nexys A7-100T with DDR2 storage, VGA graphics, SD-card checking, and four asynchronous clock domains.",
 tags:["Verilog","Vivado","DDR2","VGA","CDC","FPGA"],
-image:"Optimus_Prime_FPGA/media/screenshots/results.PNG",
+image:"Optimus_Prime_FPGA/media/screenshots/main_menu.PNG",
 gallery:[["Optimus_Prime_FPGA/media/screenshots/main_menu.PNG","Interactive VGA main menu"],["Optimus_Prime_FPGA/media/screenshots/generating.PNG","Prime generation screen"],["Optimus_Prime_FPGA/media/screenshots/results.PNG","On-board results"],["Optimus_Prime_FPGA/media/screenshots/test_mode.PNG","Independent SD-card test screen"]],
 metrics:[["640 × 480","VGA interface"],["4","Clock domains"],["11","RTL testbenches"]],
 overview:"A complete interactive hardware system on a Digilent Nexys A7-100T. The design combines a prime-generation datapath with DDR2-backed storage, VGA-based user interaction, mouse and keypad inputs, and SD-card verification. Each subsystem was implemented in RTL and integrated across distinct clock and timing domains.",
