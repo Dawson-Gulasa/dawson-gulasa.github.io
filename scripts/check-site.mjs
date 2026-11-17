@@ -12,7 +12,7 @@ const walk=(dir)=>readdirSync(dir,{withFileTypes:true}).flatMap(d=>{
 const files=walk(root);
 const html=files.filter(p=>p.endsWith('.html'));
 const scripts=files.filter(p=>p.endsWith('.js'));
-const expectedProjectPages=['optimus-prime-fpga','scc-processor','audio-tracking-car','reaction-time-button','seven-segment-clock','robotics-research','diagonal-sum-analyzer','geography-quiz','snake-game'];
+const expectedProjectPages=['optimus-prime-fpga','scc-processor','micromouse-robot','audio-tracking-car','reaction-time-button','seven-segment-clock','robotics-research','diagonal-sum-analyzer','geography-quiz','snake-game'];
 for(const slug of expectedProjectPages){
  if(!existsSync(join(root,'projects',slug+'.html')))failures.push('Missing detail page: '+slug);
 }
@@ -34,7 +34,7 @@ for(const p of html){
 }
 const dataFile=readFileSync(join(root,'assets/js/projects-data.js'),'utf8');
 const knownSlugs=[...dataFile.matchAll(/slug:"([^"]+)"/g)].map(x=>x[1]);
-if(new Set(knownSlugs).size!==9)failures.push('Project data must have nine distinct slugs');
+if(new Set(knownSlugs).size!==expectedProjectPages.length)failures.push('Project data must have '+expectedProjectPages.length+' distinct slugs');
 for(const slug of expectedProjectPages)if(!knownSlugs.includes(slug))failures.push('Missing project content: '+slug);
 console.log('HTML pages:',html.length,'JavaScript files:',scripts.length,'Project cases:',knownSlugs.length);
 if(failures.length){console.error(failures.join('\n'));process.exit(1)}
