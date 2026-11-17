@@ -2,7 +2,7 @@ name: Static website validation
 
 on:
   push:
-    branches: [main, website/initial-launch]
+    branches: [main, 'website/**']
   pull_request:
     branches: [main]
 
