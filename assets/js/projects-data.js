@@ -5,8 +5,8 @@ slug:"optimus-prime-fpga",title:"Optimus Prime FPGA",category:"Digital Hardware"
 subtitle:"An interactive, multi-clock FPGA system for generating and verifying prime numbers.",
 summary:"Built a Verilog system around the Nexys A7-100T with DDR2 storage, VGA graphics, SD-card checking, and four asynchronous clock domains.",
 tags:["Verilog","Vivado","DDR2","VGA","CDC","FPGA"],
-image:"Optimus_Prime_FPGA/media/screenshots/main_menu.PNG",
-gallery:[["Optimus_Prime_FPGA/media/screenshots/main_menu.PNG","Interactive VGA main menu"],["Optimus_Prime_FPGA/media/screenshots/generating.PNG","Prime generation screen"],["Optimus_Prime_FPGA/media/screenshots/results.PNG","On-board results"],["Optimus_Prime_FPGA/media/screenshots/test_mode.PNG","Independent SD-card test screen"]],
+image:"Optimus_Prime_FPGA/media/screenshots/main_menu_updated.png",
+gallery:[["Optimus_Prime_FPGA/media/screenshots/main_menu_updated.png","Updated FPGA main menu image"],["Optimus_Prime_FPGA/media/screenshots/generating.PNG","Prime generation screen"],["Optimus_Prime_FPGA/media/screenshots/results.PNG","On-board results"],["Optimus_Prime_FPGA/media/screenshots/test_mode.PNG","Independent SD-card test screen"]],
 metrics:[["640 × 480","VGA interface"],["4","Clock domains"],["11","RTL testbenches"]],
 overview:"A complete interactive hardware system on a Digilent Nexys A7-100T. The design combines a prime-generation datapath with DDR2-backed storage, VGA-based user interaction, mouse and keypad inputs, and SD-card verification. Each subsystem was implemented in RTL and integrated across distinct clock and timing domains.",
 challenge:"The central challenge was coordinating computation, display, external DDR2 memory and independent SD communication without losing data across clock boundaries.",
@@ -35,7 +35,23 @@ extra:[],
 credits:"Three-person UGA Computer Architecture group project with Dawson Gulasa, Joshua Oh and Sam Baker. Contributions and course resources are credited in the public documentation."
 },
 {
-slug:"audio-tracking-car",title:"Audio-Tracking Autonomous Car",category:"Circuits & Embedded",filter:"embedded",featured:true,order:3,period:"Spring 2025",
+slug:"micromouse-robot",title:"Micromouse Autonomous Robot",category:"Circuits & Embedded",filter:"embedded",featured:true,order:3,period:"Fall 2025–present",
+subtitle:"Compact PCB and electronics for an IEEE Micromouse competition robot.",
+summary:"Leading PCB design for an autonomous maze robot with STM32 control, six infrared sensor positions, BNO080 motion sensing and dual-motor drive.",
+tags:["PCB Design","Altium","STM32F405","IR Sensors","Motor Control"],
+image:"Micromouse_Robot/media/micromouse_pcb_3d.png",
+gallery:[["Micromouse_Robot/media/micromouse_pcb_3d.png","PCB 3D rendering"],["Micromouse_Robot/media/micromouse_pcb_layout.png","PCB routing layout"]],
+metrics:[["6","IR sensor positions"],["STM32","Controller"],["In progress","Project status"]],
+overview:"I lead PCB and electronics development for an IEEE Micromouse maze-solving robot. The board combines a microcontroller, inertial sensor, six perimeter IR sensing positions, dual-motor interface and regulated power architecture.",
+challenge:"Balancing compact mechanical geometry with reliable sensing, power delivery, firmware interfaces, motor-drive routing and access for debugging.",
+approach:["Designed and routed the compact PCB with STM32F405 and BNO080 hardware.","Integrated six IR sensing positions, battery-derived 3.3 V and 5 V buck rails and a DRV8833 dual H-bridge.","Mapped I²C, SWD, UART, PWM and nSLEEP/nFAULT signal interfaces.","Coordinated PCB design and electrical integration with the IEEE competition team."],
+outcome:"Ongoing hardware engineering project. The current PCB layout and circuit schematic are documented; performance and competition results will be added as the team progresses.",
+results:[["STM32F405","Embedded control"],["Six IR channels","Wall sensing"],["DRV8833","Dual motor drive"]],
+github:"Micromouse_Robot/",report:"Micromouse_Robot/docs/Micromouse_Schematics.pdf",extra:[],
+credits:"IEEE Micromouse competition team. Dawson leads PCB and electronics design; broader robot development is collaborative."
+},
+{
+slug:"audio-tracking-car",title:"Audio-Tracking Autonomous Car",category:"Circuits & Embedded",filter:"embedded",featured:true,order:4,period:"Spring 2025",
 subtitle:"A sound-directed robot integrating analog electronics and motor control.",
 summary:"A two-wheel autonomous vehicle built around a Raspberry Pi, microphone front end, active audio filters, comparators and motor control.",
 tags:["Analog Circuits","Raspberry Pi","PCB","Python","Robotics"],
@@ -52,7 +68,7 @@ extra:[["Watch project user manual","https://www.youtube.com/watch?v=HQ8RJdJg2CQ
 credits:"UGA ECSE 2920 Group 11 project. Dawson led technical documentation and supported cross-functional hardware/software engineering. The complete project was collaborative."
 },
 {
-slug:"reaction-time-button",title:"Reaction-Time Training Button",category:"Circuits & Embedded",filter:"embedded",featured:true,order:4,period:"Fall 2025",
+slug:"reaction-time-button",title:"Reaction-Time Training Button",category:"Circuits & Embedded",filter:"embedded",featured:true,order:5,period:"Fall 2025",
 subtitle:"A compact sensor-based measurement device with custom PCB and enclosure.",
 summary:"Embedded reaction-time trainer combining FSR/IR sensing, OLED feedback, MicroPython, wireless telemetry, PCB layout and enclosure CAD.",
 tags:["PCB Design","Sensors","MicroPython","OLED","IoT"],
@@ -69,7 +85,7 @@ extra:[["View original device demo","https://drive.google.com/file/d/13KiLQajpab
 credits:"Academic team sensor project. Photos and source are preserved in the engineering portfolio; work is described as collaborative unless separately attributed."
 },
 {
-slug:"seven-segment-clock",title:"Seven-Segment Clock & Timer",category:"Circuits & Embedded",filter:"embedded",featured:true,order:5,period:"Spring 2026",
+slug:"seven-segment-clock",title:"Seven-Segment Clock & Timer",category:"Circuits & Embedded",filter:"embedded",featured:true,order:6,period:"Spring 2026",
 subtitle:"Digital logic, latches and a Raspberry Pi real-time control experiment.",
 summary:"Four-digit digital clock and timer using GPIO, D flip-flop latches, a matrix keypad and finite-state control.",
 tags:["Digital Circuits","GPIO","Python","FSM","Testing"],
@@ -86,11 +102,11 @@ extra:[["Manual timing timelapse","https://youtu.be/tlYcAgZpxhg"],["Sleep timing
 credits:"University of Georgia team course project. The experimental results belong to the original group submission."
 },
 {
-slug:"robotics-research",title:"Automated Robotics Inspection Research",category:"Research",filter:"research",featured:true,order:6,period:"Summer 2025",
+slug:"robotics-research",title:"Automated Robotics Inspection Research",category:"Research",filter:"research",featured:true,order:7,period:"Summer 2025",
 subtitle:"Connecting perception, robotic manipulators and automated scanning.",
 summary:"Robotic inspection work using YOLO and depth perception, PCA-based pose estimation, UR5e/DOBOT control and generated scan reports.",
 tags:["Python","OpenCV","YOLO","Robotics","3D Vision"],
-image:"",gallery:[],
+image:"Research_Documentation/media/robotic_inspection_lab.png",gallery:[["Research_Documentation/media/robotic_inspection_lab.png","Research lab robot setup"]],
 metrics:[["6D","Pose estimation"],["YOLO + depth","Perception pipeline"],["UR5e / DOBOT","Robotic systems"]],
 overview:"Research in the University of Georgia robotics laboratory under Dr. Hongyue Sun, supporting robotic localization, manipulation and autonomous inspection. The workflow linked object detection and geometric pose calculations with robot communications and 3D scanning.",
 challenge:"Coordinating depth/camera processing, 6D object pose estimation and reliable robot communications in a practical automated inspection pipeline.",
@@ -102,11 +118,11 @@ extra:[["AutoInspector research record","https://par.nsf.gov/biblio/10716809-aut
 credits:"Collaborative research in Dr. Hongyue Sun's UGA laboratory. Technical contributions are described without claiming sole authorship of the overall lab framework."
 },
 {
-slug:"diagonal-sum-analyzer",title:"Parallel Diagonal Sum Analyzer",category:"Software",filter:"software",featured:false,order:7,period:"Course project",
+slug:"diagonal-sum-analyzer",title:"Parallel Diagonal Sum Analyzer",category:"Software",filter:"software",featured:false,order:8,period:"Course project",
 subtitle:"Concurrent grid processing in C with POSIX threads.",
 summary:"A parallel C tool that finds contiguous diagonal segments matching a target sum using one to three worker threads.",
 tags:["C","POSIX Threads","Algorithms","Memory"],
-image:"",gallery:[],
+image:"diagonal_sum_analyzer/media/parallel_diagonal_concept.svg",gallery:[["diagonal_sum_analyzer/media/parallel_diagonal_concept.svg","Concept illustration of the parallel algorithm"]],
 metrics:[["1–3","Worker threads"],["C","Language"],["2","Diagonal directions"]],
 overview:"A CLI application that reads square grids of digit characters, finds contiguous diagonal windows matching a target sum and writes a shape-preserving output grid marking matched cells.",
 challenge:"Partitioning diagonal work across multiple POSIX threads while managing dynamic grid memory and preserving the course-defined input/output behavior.",
@@ -117,11 +133,11 @@ github:"diagonal_sum_analyzer/",report:"",
 extra:[],credits:"Academic programming project with course-defined interfaces."
 },
 {
-slug:"geography-quiz",title:"Geography Game Show Quiz",category:"Software",filter:"software",featured:false,order:8,period:"Course project",
+slug:"geography-quiz",title:"Geography Game Show Quiz",category:"Software",filter:"software",featured:false,order:9,period:"Course project",
 subtitle:"Data-driven JavaFX desktop application.",
 summary:"A JavaFX multiple-choice quiz with randomized country questions, CSV resources and persisted results.",
 tags:["Java","JavaFX","Maven","OOP"],
-image:"",gallery:[],
+image:"game_show_quiz/media/geography_quiz_concept.svg",gallery:[["game_show_quiz/media/geography_quiz_concept.svg","Concept illustration, not a screenshot"]],
 metrics:[["6","Questions per round"],["JavaFX","GUI"],["CSV","Question dataset"]],
 overview:"A desktop geography quiz built in JavaFX that selects six unique countries, prompts for their continents, gives timed feedback and saves quiz-score history.",
 challenge:"Separating application state, GUI event handling and persistent quiz data while ensuring the program can run independently of the developer’s original file system.",
@@ -131,11 +147,11 @@ results:[["6","Random questions"],["Maven","Build system"],["JavaFX","Desktop UI
 github:"game_show_quiz/",report:"",extra:[],credits:"Academic programming course application."
 },
 {
-slug:"snake-game",title:"Console Snake Game",category:"Software",filter:"software",featured:false,order:9,period:"Early programming project",
+slug:"snake-game",title:"Console Snake Game",category:"Software",filter:"software",featured:false,order:10,period:"Early programming project",
 subtitle:"Classic game-loop logic implemented in C.",
 summary:"Windows console Snake with nonblocking keyboard input, score tracking and collision detection.",
 tags:["C","Game Logic","Windows API"],
-image:"",gallery:[],
+image:"snake_game/media/snake_terminal.png",gallery:[["snake_game/media/snake_terminal.png","Snake gameplay reference; on-screen controls may differ from the current C source"]],
 metrics:[["C","Language"],["WASD","Input controls"],["Windows","Console target"]],
 overview:"A console-based version of Snake, implemented in C with a repeated screen draw, keyboard polling, scoring, moving tail state and wall/body collision behavior.",
 challenge:"Implementing basic real-time game state, keyboard input and tail movement under a fixed tick interval.",

@@ -7,23 +7,16 @@ A standalone, responsive engineering portfolio built with **HTML, CSS and vanill
 - **Home**: professional introduction, featured hardware projects and engineering experience
 - **About**: engineering interests, education, involvement and technical focus
 - **Experience**: work history, research, coursework and skills
-- **Projects**: filterable catalog of all nine published GitHub engineering projects
+- **Projects**: filterable catalog of all ten published GitHub engineering projects
 - **Resume**: one-page PDF download and professional summary
 - **Contact**: direct email, LinkedIn and GitHub links
-- **Nine separate project case-study URLs** in `projects/`: engineering problem, design approach, validation, limitations, photos, source and reports
+- **Ten separate project case-study URLs** in `projects/`: engineering problem, design approach, validation, limitations, photos, source and reports
 
 The project content comes from the public `.Projects` repository and the supplied current resume. All course and group metrics are described as original recorded results rather than newly verified measurements. No company-confidential documents are reproduced.
 
-## Important: Add the two binary assets before publishing
+## Personal files
 
-The GitHub editor connection used to create this branch cannot transfer local binary files. **These two assets must be uploaded on the review branch before merging**:
-
-| From the companion upload ZIP | GitHub destination |
-|---|---|
-| `headshot.jpg` | `assets/headshot.jpg` |
-| `resume.pdf` | `assets/resume.pdf` |
-
-An `assets/` directory already exists. Open the website's `assets/` directory on branch `website/initial-launch`, choose **Add file → Upload files**, and upload the two files with those exact filenames. Commit to the existing review branch. The home and About portraits and all Resume links will immediately work. The portrait will fall back to your public GitHub avatar if the file is still missing, but the resume button should not be considered complete before upload.
+The current headshot and one-page resume are stored at `assets/headshot.jpg` and `assets/resume.pdf`. Keep `assets/resume.pdf` updated when the resume changes.
 
 ## Design system
 
@@ -62,7 +55,7 @@ Open `http://localhost:8000` in a browser. No dependencies or compilation requir
 4. Open **https://dawson-gulasa.github.io/** once GitHub Pages shows the deployment URL and status.
 5. Check home, project pages, linked media, contact links and PDF download.
 
-This repo has no custom domain and therefore requires no `CNAME`. GitHub Pages is public, and files committed to `main` are publicly accessible.
+This is a GitHub Pages user website. Files merged into `main` are published automatically after successful deployment.
 
 ## Updates
 
